@@ -1,0 +1,14 @@
+name: Kasmir Tampan CI
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: macos-latest
+        steps:
+            - name: checkout repository
+              uses: actions/checkout@v4
+              
