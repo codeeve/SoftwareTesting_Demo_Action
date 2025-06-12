@@ -21,5 +21,12 @@ jobs:
             - run: flutter pub get
             - run: flutter test --coverage
 
-        
+        # build if pass
+            - name: build apk
+              run: flutter build apk 
 
+            - name: upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: KasmirTampan.apk
+                path: build/app/outputs/flutter-apk/app-release.apk
